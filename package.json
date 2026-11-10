@@ -1,0 +1,15 @@
+{
+  "description": "A chat agent with one tool (web search) and timestamped snapshot memory, so it can answer what changed since you last asked.",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "name": "minimi-chat-agent",
+  "scripts": {
+    "dev": "node src/server.js",
+    "seed": "node scripts/seed-demo.js",
+    "start": "node src/server.js"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>minimi chat agent</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>minimi chat agent</h1>
+        <p class="sub">One tool: web search. Plus a memory that remembers what it told you, and when.</p>
+      </div>
+      <button id="newChatBtn" class="ghost-btn" type="button">New chat</button>
+    </header>
+
+    <section class="hints">
+      <button class="hint" type="button">What is the current pricing of Supabase?</button>
+      <button class="hint" type="button">What did I ask you about Postgres hosting last Tuesday? Has pricing changed?</button>
+      <button class="hint" type="button">What did I ask you on 3 November? Is your answer still correct today?</button>
+    </section>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="chatForm" class="composer">
+      <input id="messageInput" type="text" placeholder="Ask something current, or ask about a past day..." autocomplete="off" />
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+    <p class="foot">Tip: run <code>npm run seed</code> to load backdated demo conversations, then ask about last Tuesday.</p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
